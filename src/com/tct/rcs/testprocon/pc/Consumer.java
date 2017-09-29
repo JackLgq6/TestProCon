@@ -33,7 +33,7 @@ public class Consumer implements Runnable{
 		}	*/	
 		YearUtils.setDate(year, month, day);
 		//mAbstractFactory.produce(YearUtils.getYear(), YearUtils.getMonth());
-		YearUtils.go(mAbstractFactory, new Consumer());
+		//YearUtils.go(mAbstractFactory, new Consumer());
 	}
 
 }

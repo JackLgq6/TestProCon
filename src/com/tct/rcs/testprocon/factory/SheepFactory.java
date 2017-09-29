@@ -4,7 +4,7 @@ public class SheepFactory implements AbstractFactory{
 
 
 	@Override
-	public void produce(int year, int month) {
+	public void produce(int year, int month, int day) {
 		// TODO Auto-generated method stub
 		
 	}

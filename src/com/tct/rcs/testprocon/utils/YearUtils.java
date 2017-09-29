@@ -3,8 +3,6 @@ package com.tct.rcs.testprocon.utils;
 import java.util.Calendar;
 
 import com.tct.rcs.testprocon.factory.AbstractFactory;
-import com.tct.rcs.testprocon.pc.Consumer;
-import com.tct.rcs.testprocon.pc.Producer;
 
 public class YearUtils {
 
@@ -33,17 +31,17 @@ public class YearUtils {
 		return month;
 	}
 	
-	public static void go(AbstractFactory abstractFactory, Object object) {
+	public static void go(AbstractFactory abstractFactory) {
 		int year = mCalendar.get(Calendar.YEAR);
 		int month = mCalendar.get(Calendar.MONTH);
 		int day = mCalendar.get(Calendar.DAY_OF_MONTH);
-		if (object instanceof Producer) {
+		/*if (object instanceof Producer) {
 			abstractFactory.produce(year, month);
 		} else if (object instanceof Consumer) {
 			abstractFactory.consume(year, month);
-		}
-		/*abstractFactory.produce(year, month);
-		abstractFactory.consume(year, month);*/
+		}*/
+		abstractFactory.produce(year, month, day);
+		abstractFactory.consume(year, month);
 		/*oneDayAgo(day);
 		if (day == 30) {
 			oneMouthAgo(month);
@@ -59,7 +57,7 @@ public class YearUtils {
 			return;
 		}
 
-		go(abstractFactory, object);
+		go(abstractFactory);
 	}
 
 	public static void oneDayAgo(int day) {

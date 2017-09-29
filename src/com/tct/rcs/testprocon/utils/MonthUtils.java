@@ -13,8 +13,22 @@ public class MonthUtils {
 		return false;
 	}
 	
-	public static boolean isThirdMonth(int month) {
-		if (3 == month) {
+	public static boolean isEggsMonth(int month) {
+		if (month == 1 || month == 3 || month == 5 || month == 10 || month == 12) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean isOtherEggsMonth(int month) {
+		if (month == 4 || month == 6 || month == 11) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean isThirdMonth(int month, int day) {
+		if (3 == month && day == 22) {
 			return true;
 		}
 		return false;

@@ -43,8 +43,12 @@ public class MainFarm {
 		/*new Producer(new ChickenFactory(), mInitYear, mInitMonth, day).run();
 		new Consumer(new ChickenFactory(), mInitYear, mInitMonth, day).run();*/
 		
-		new Thread(new Producer(new ChickenFactory(), mInitYear, mInitMonth, day)).start();
-		new Thread(new Consumer(new ChickenFactory(), mInitYear, mInitMonth, day)).start();
+		/*new Thread(new Producer(new ChickenFactory(), mInitYear, mInitMonth, day)).start();
+		new Thread(new Consumer(new ChickenFactory(), mInitYear, mInitMonth, day)).start();*/
+		ChickenFactory chickenFactory = new ChickenFactory();
+		YearUtils.setDate(mInitYear, mInitMonth, day);
+		YearUtils.go(chickenFactory);
+		
 		
 		//羊的生产/消费
 		/*int mInitRawNum = 2;

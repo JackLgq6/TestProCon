@@ -3,7 +3,7 @@ package com.tct.rcs.testprocon.factory;
 public class CattleFactory implements AbstractFactory{
 
 	@Override
-	public void produce(int year, int month) {
+	public void produce(int year, int month, int day) {
 		// TODO Auto-generated method stub
 		
 	}

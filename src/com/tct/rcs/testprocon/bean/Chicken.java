@@ -13,11 +13,12 @@ public class Chicken extends Animal {
 	private int mCurrentYear = 2017;	//当前年
 	private int mCurrentMonth = 9;	//当前月
 	private int CurrentDay = 1;	//当前日
+	private int day;
 	AbstractFactory factory = new ChickenFactory();
 	
 	@Override
 	public void giveBirth() {
-		factory.produce(mCurrentYear, mCurrentMonth);
+		factory.produce(mCurrentYear, mCurrentMonth, day);
 	}
 
 	public void custome() {

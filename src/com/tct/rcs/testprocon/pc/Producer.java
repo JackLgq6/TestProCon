@@ -27,7 +27,7 @@ public class Producer implements Runnable {
 	public void run() {
 		YearUtils.setDate(year, month, day);
 		//mAbstractFactory.produce(YearUtils.getYear(), YearUtils.getMonth());
-		YearUtils.go(mAbstractFactory, new Producer());
+		//YearUtils.go(mAbstractFactory, new Producer());
 	}
 
 }
